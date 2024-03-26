@@ -2,7 +2,7 @@
 
 import unittest
 
-from package_foobar.package_foobar.main import main
+from .main import main
 
 
 class TestMain(unittest.TestCase):

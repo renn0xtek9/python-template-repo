@@ -14,7 +14,7 @@ jobs:
       - name: pylint
         run: pylint --load-plugins=pylint.extensions.docparams  ${{ github.workspace }}/package_foobar
       - name: unit-test
-        run: coverage run --source=package_foobar -m unittest discover -v -b -s ${{ github.workspace }}/package_foobar/package_foobar
+        run: coverage run --source=package_foobar -m unittest discover -v -b -s ${{ github.workspace }}
       - name: test-coverage
         run: coverage report -m --omit="/usr/*,/home/runner/.local/*" --fail-under=100
       - name: test local deployment

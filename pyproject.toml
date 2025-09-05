@@ -5,10 +5,34 @@ line-length = 120
 profile = "black"
 multi_line_output = 3
 
-[tool.pylint]
-disable = """
-    attribute-defined-outside-init
-"""
+[tool.pylint.master]
+load-plugins = [
+    "pylint.extensions.docparams"
+]
+
+[tool.pylint.format]
 max-line-length = 120
-max-args =  10
-no-docstring-rgx = "test_*|Test*"
+no-docstring-rgx="test_*|Test*"
+
+[tool.pylint.reports]
+fail-under=10
+output-format="text"
+score="yes"
+
+[tool.coverage.run]
+omit = [
+    "/usr/*",
+    "/home/runner/.local/*",
+    "setup.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover"
+]
+
+fail_under = 100
+
+
+[tool.pydocstyle]
+convention = "google"

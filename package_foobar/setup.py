@@ -1,5 +1,6 @@
 """Setup of package_foobar."""
 
+# pragma: no cover
 from setuptools import find_packages, setup
 
 setup(

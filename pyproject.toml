@@ -22,7 +22,8 @@ score="yes"
 [tool.coverage.run]
 omit = [
     "/usr/*",
-    "/home/runner/.local/*"
+    "/home/runner/.local/*",
+    "setup.py",
 ]
 
 [tool.coverage.report]
